@@ -6,7 +6,7 @@
 /*   By: aliburdi <aliburdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 19:03:08 by lbusi             #+#    #+#             */
-/*   Updated: 2022/11/22 17:50:14 by aliburdi         ###   ########.fr       */
+/*   Updated: 2022/11/22 18:07:07 by aliburdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	line_counter(t_data *d)
 	i = 0;
 	fd = open(d->map, O_RDONLY);
 	if (fd < 1)
-		return ;
+		return (0);
 	line = get_next_line(fd);
 	while (line != NULL)
 	{
