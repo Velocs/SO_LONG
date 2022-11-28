@@ -6,7 +6,7 @@
 /*   By: aliburdi <aliburdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 18:22:53 by aliburdi          #+#    #+#             */
-/*   Updated: 2022/11/22 17:17:18 by aliburdi         ###   ########.fr       */
+/*   Updated: 2022/11/28 18:42:53 by aliburdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,32 @@ int	ft_strcmp(char *s1, char *s2)
 		i++;
 	}
 	return ((unsigned char)s1[i] - (unsigned char)s2[c]);
+}
+
+void	error_check(t_data *d)
+{
+	int		fd;
+	int		i;
+	size_t	len;
+	char	*line;
+
+	i = 0;
+	fd = open(d->map, O_RDONLY);
+	if (fd == -1)
+		exit(0);
+	line = get_next_line(fd);
+	len = ft_strlen(line);
+	while (i < d->y_max)
+	{
+		if (len != ft_strlen(line))
+		{
+			write(1, "ERROR: MAP ISN'T RECTANGULAR\n", 29);
+			close(fd);
+			exit(0);
+		}
+		free(line);
+		line = get_next_line(fd);
+		i++;
+	}
+	close(fd);
 }

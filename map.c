@@ -6,7 +6,7 @@
 /*   By: aliburdi <aliburdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:55:16 by lbusi             #+#    #+#             */
-/*   Updated: 2022/11/22 18:42:49 by aliburdi         ###   ########.fr       */
+/*   Updated: 2022/11/23 15:09:09 by aliburdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,9 +133,9 @@ void	element_check(t_data *d)
 		}
 		y++;
 	}
-	if (!d->a || !d->b || !d->c)
+	if (!d->a || d->b != 1 || d->c != 1)
 	{
-		write(1, "ERROR: MISSING COIN, EXIT OR PLAYER\n", 37);
+		write(1, "ERROR: WRONG NUMBER OF COIN, EXIT OR PLAYER\n", 43);
 		ft_close(d);
 	}
 }

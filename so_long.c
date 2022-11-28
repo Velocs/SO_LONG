@@ -6,7 +6,7 @@
 /*   By: aliburdi <aliburdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 17:40:25 by lbusi             #+#    #+#             */
-/*   Updated: 2022/11/22 17:37:10 by aliburdi         ###   ########.fr       */
+/*   Updated: 2022/11/28 17:39:07 by aliburdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ int	main(int ac, char **av)
 	fd_check(&d);
 	initializer(&d);
 	animation_initializer(&d);
+	error_check(&d);
 	if (d.x_max == d.y_max)
 	{
 		write(1, "ERROR: SQUARE MAP\n", 18);
