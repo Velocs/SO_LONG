@@ -6,7 +6,7 @@
 /*   By: aliburdi <aliburdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 17:30:00 by lbusi             #+#    #+#             */
-/*   Updated: 2022/11/28 17:38:44 by aliburdi         ###   ########.fr       */
+/*   Updated: 2022/11/30 18:07:20 by aliburdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,7 @@ void	animation4(t_data *d, int x, int y);
 void	animation_initializer(t_data *d);
 void	fd_check(t_data *d);
 void	error_check(t_data *d);
+void	square_map(t_data *d);
 int		kid_animation(t_data *d);
 int		move_counter(t_data *d);
 int		ft_close(t_data *d);

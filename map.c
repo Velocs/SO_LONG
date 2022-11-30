@@ -6,7 +6,7 @@
 /*   By: aliburdi <aliburdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 18:55:16 by lbusi             #+#    #+#             */
-/*   Updated: 2022/11/23 15:09:09 by aliburdi         ###   ########.fr       */
+/*   Updated: 2022/11/30 17:50:12 by aliburdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void	walls_check_lines(t_data *d)
 	{
 		if (d->matrix[y][x] != '1')
 		{
-			write(1, "ERROR: INVALID MAP!\n", 20);
+			write(1, "ERROR:\nINVALID MAP!\n", 20);
 			ft_close(d);
 		}
 		x++;
@@ -75,7 +75,7 @@ void	walls_check_lines(t_data *d)
 	{
 		if (d->matrix[y][x] != '1')
 		{
-			write(1, "ERROR: INVALID MAP!\n", 20);
+			write(1, "ERROR:\nINVALID MAP!\n", 20);
 			ft_close(d);
 		}
 		x++;
@@ -93,7 +93,7 @@ void	walls_check_columns(t_data *d)
 	{
 		if (d->matrix[y][x] != '1')
 		{
-			write(1, "ERROR: INVALID MAP!\n", 20);
+			write(1, "ERROR:\nINVALID MAP!\n", 20);
 			ft_close(d);
 		}
 		y++;
@@ -104,7 +104,7 @@ void	walls_check_columns(t_data *d)
 	{
 		if (d->matrix[y][x] != '1')
 		{
-			write(1, "ERROR: INVALID MAP!\n", 20);
+			write(1, "ERROR:\nINVALID MAP!\n", 20);
 			ft_close(d);
 		}
 		y++;
@@ -135,7 +135,7 @@ void	element_check(t_data *d)
 	}
 	if (!d->a || d->b != 1 || d->c != 1)
 	{
-		write(1, "ERROR: WRONG NUMBER OF COIN, EXIT OR PLAYER\n", 43);
+		write(1, "ERROR:\nWRONG NUMBER OF COIN, EXIT OR PLAYER\n", 43);
 		ft_close(d);
 	}
 }

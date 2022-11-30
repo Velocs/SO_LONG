@@ -6,7 +6,7 @@
 /*   By: aliburdi <aliburdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 19:03:08 by lbusi             #+#    #+#             */
-/*   Updated: 2022/11/23 16:45:56 by aliburdi         ###   ########.fr       */
+/*   Updated: 2022/11/30 17:49:27 by aliburdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ void	check_characters(t_data *d)
 				&& d->matrix[y][x] != 'P' && d->matrix[y][x] != 'E'
 				&& d->matrix[y][x] != 'C' && d->matrix[y][x] != 'N')
 			{
-				write(1, "ERROR: WRONG CHARACTERS IN MAP\n", 31);
+				write(1, "ERROR:\nWRONG CHARACTERS IN MAP\n", 31);
 				ft_close(d);
 			}
 			x++;

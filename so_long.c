@@ -6,7 +6,7 @@
 /*   By: aliburdi <aliburdi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 17:40:25 by lbusi             #+#    #+#             */
-/*   Updated: 2022/11/28 17:39:07 by aliburdi         ###   ########.fr       */
+/*   Updated: 2022/11/30 18:28:53 by aliburdi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	fd_check(t_data *d)
 {
 	if (ft_strcmp(d->map, ".ber"))
 	{
-		write(1, "ERROR: INVALID MAP ARGUMENT\n", 28);
+		write(1, "ERROR:\nINVALID MAP ARGUMENT\n", 28);
 	}
 }
 
@@ -77,11 +77,7 @@ int	main(int ac, char **av)
 	initializer(&d);
 	animation_initializer(&d);
 	error_check(&d);
-	if (d.x_max == d.y_max)
-	{
-		write(1, "ERROR: SQUARE MAP\n", 18);
-		return (0);
-	}
+	square_map(&d);
 	matrix_c(&d);
 	check_characters(&d);
 	map_check(&d);
